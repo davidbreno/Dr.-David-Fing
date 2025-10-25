@@ -16,7 +16,17 @@
 /* temas existentes */
 html[data-theme="emerald"] { --bg1:#0b3b3a; --bg2:#0a2e2c; --blob1:rgba(16,185,129,.18); --blob2:rgba(59,130,246,.12); --blob3:rgba(20,184,166,.16); --surface:rgba(60,83,79,.45); }
 html[data-theme="teal"]    { --bg1:#063b3b; --bg2:#042c2c; --blob1:rgba(45,212,191,.18); --blob2:rgba(56,189,248,.12); --blob3:rgba(94,234,212,.16); --surface:rgba(40,70,68,.48); }
-html[data-theme="purple"]  { --bg1:#1a1335; --bg2:#120d26; --blob1:rgba(168,85,247,.18); --blob2:rgba(56,189,248,.10); --blob3:rgba(99,102,241,.16); --surface:rgba(58,50,92,.50); }
+html[data-theme="purple"]  {
+  --bg1: #000000; /* fundo principal preto */
+  --bg2: s000000; /* fundo secundário roxo escuro (mantido) */
+  --blob2: rgba(248, 255, 255, 0.1);
+  --blob3: #2a2a2a;
+  --surface: #282828; /* cards cinza escuro */
+  --border: rgba(125, 124, 124, 0.06);
+  --grid: #0d0d0d;
+  --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --text-main: #e5e7eb; /* cinza claro quase branco */
+}
 html[data-theme="amber"]   { --bg1:#3b2a0b; --bg2:#2c200a; --blob1:rgba(245,158,11,.20); --blob2:rgba(251,191,36,.12); --blob3:rgba(250,204,21,.14); --surface:rgba(83,70,60,.48); }
 html[data-theme="rose"]    { --bg1:#3b0b1a; --bg2:#2c0a16; --blob1:rgba(244,63,94,.20); --blob2:rgba(59,130,246,.10); --blob3:rgba(251,113,133,.16); --surface:rgba(83,60,70,.48); }
 

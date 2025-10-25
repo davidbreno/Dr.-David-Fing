@@ -36,7 +36,7 @@ export default function Sidebar(){
   return (
     <aside className="relative">
       <div className="absolute -right-4 top-40 z-10 h-8 w-8 rounded-full glass flex items-center justify-center text-slate-200/70 select-none">‹</div>
-      <div className="glass rounded-[32px] p-4 lg:p-6 min-h-[92vh] flex flex-col">
+      <div className="glass rounded-[32px] p-4 lg:p-6 min-h-[100vh] flex flex-col">
         <div className="relative">
           <div className="absolute -top-3 left-0 right-0 flex items-center justify-center gap-2">
             <Dot className="bg-red-400/70"/><Dot className="bg-yellow-300/70"/><Dot className="bg-green-400/70"/>
