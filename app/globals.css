@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base */
+:root {
+  --bg1:#0b3b3a; --bg2:#0a2e2c;
+  --blob1:rgba(17,94,89,.20); --blob2:rgba(59,130,246,.15); --blob3:rgba(16,185,129,.15);
+  --surface:rgba(60,83,79,0.45); --border:rgba(255,255,255,0.06); --grid:rgba(255,255,255,0.06);
+  --chart-1:rgba(94,234,212,.9); --chart-1-fill:rgba(94,234,212,.15);
+  --chart-2:rgba(96,165,250,.9); --chart-2-fill:rgba(96,165,250,.15);
+  --chart-3:rgba(248,113,113,.9); --chart-3-fill:rgba(248,113,113,.15);
+  --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* temas existentes */
+html[data-theme="emerald"] { --bg1:#0b3b3a; --bg2:#0a2e2c; --blob1:rgba(16,185,129,.18); --blob2:rgba(59,130,246,.12); --blob3:rgba(20,184,166,.16); --surface:rgba(60,83,79,.45); }
+html[data-theme="teal"]    { --bg1:#063b3b; --bg2:#042c2c; --blob1:rgba(45,212,191,.18); --blob2:rgba(56,189,248,.12); --blob3:rgba(94,234,212,.16); --surface:rgba(40,70,68,.48); }
+html[data-theme="purple"]  { --bg1:#1a1335; --bg2:#120d26; --blob1:rgba(168,85,247,.18); --blob2:rgba(56,189,248,.10); --blob3:rgba(99,102,241,.16); --surface:rgba(58,50,92,.50); }
+html[data-theme="amber"]   { --bg1:#3b2a0b; --bg2:#2c200a; --blob1:rgba(245,158,11,.20); --blob2:rgba(251,191,36,.12); --blob3:rgba(250,204,21,.14); --surface:rgba(83,70,60,.48); }
+html[data-theme="rose"]    { --bg1:#3b0b1a; --bg2:#2c0a16; --blob1:rgba(244,63,94,.20); --blob2:rgba(59,130,246,.10); --blob3:rgba(251,113,133,.16); --surface:rgba(83,60,70,.48); }
+
+/* novos temas */
+html[data-theme="blackcyan"]{
+  --bg1:#020617; --bg2:#0b1020;
+  --blob1:rgba(34,211,238,.16); --blob2:rgba(59,130,246,.10); --blob3:rgba(13,148,136,.14);
+  --surface:rgba(15,23,42,.6);
+  --chart-1:rgba(34,211,238,.9); --chart-1-fill:rgba(34,211,238,.15);
+  --chart-2:rgba(59,130,246,.9); --chart-2-fill:rgba(59,130,246,.15);
+  --chart-3:rgba(16,185,129,.9); --chart-3-fill:rgba(16,185,129,.15);
+}
+html[data-theme="silver"]{
+  --bg1:#0e1014; --bg2:#14161c;
+  --blob1:rgba(148,163,184,.18); --blob2:rgba(203,213,225,.12); --blob3:rgba(226,232,240,.10);
+  --surface:rgba(99,102,106,.35);
+  --chart-1:rgba(226,232,240,.95); --chart-1-fill:rgba(226,232,240,.20);
+  --chart-2:rgba(148,163,184,.95); --chart-2-fill:rgba(148,163,184,.20);
+  --chart-3:rgba(203,213,225,.95); --chart-3-fill:rgba(203,213,225,.20);
+}
+
+/* fontes (aplicadas via data-font) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+html[data-font="inter"]      { --font-body: "Inter", system-ui, sans-serif; }
+html[data-font="merri"]      { --font-body: "Merriweather", serif; }
+html[data-font="playfair"]   { --font-body: "Playfair Display", serif; }
+
+@layer utilities {
+  .bg-blobs {
+    background:
+      radial-gradient(1200px 600px at 10% 10%, var(--blob1), transparent 60%),
+      radial-gradient(900px 500px at 80% 20%, var(--blob2), transparent 60%),
+      radial-gradient(800px 600px at 30% 80%, var(--blob3), transparent 60%),
+      linear-gradient(180deg, var(--bg1), var(--bg2));
+  }
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 24px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+}
+
+:root { color-scheme: dark; }
+body  { font-family: var(--font-body); }
+* { -webkit-tap-highlight-color: transparent; }
+
+/* link secreto discreto */
+.reset-link { position: fixed; bottom: 8px; left: 10px; opacity:.18; font-size:10px; letter-spacing:.08em; }
+.reset-link:hover { opacity:.5; text-decoration: underline; }

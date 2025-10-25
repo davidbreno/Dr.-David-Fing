@@ -1,0 +1,1 @@
+export const metadata={title:"Exit"}; export default function P(){return(<div className="glass rounded-2xl p-6"><h1 className="text-lg font-semibold mb-2">Você saiu</h1><p className="opacity-70">Aqui você pode redirecionar para login.</p></div>)}
