@@ -11,15 +11,15 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/config/page": [
+    "/secreto/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/config/page.js"
+      "static/chunks/app/secreto/page.js"
     ],
-    "/config/layout": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/config/layout.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

@@ -332,8 +332,8 @@ function ContasCard(props){
       </div>
 
       <div className="h-[200px] grid grid-cols-7 gap-1 rounded-xl border border-white/10 bg-white/5 p-3">
-        {WEEK_HDR.map((w)=>(
-          <div key={`h-${w}`} className="text-[10px] opacity-70 text-center">{w}</div>
+        {WEEK_HDR.map((w, idx)=> (
+          <div key={`h-${w}-${idx}`} className="text-[10px] opacity-70 text-center">{w}</div>
         ))}
         {calDays.map((d, idx) => {
           if (!d) return <div key={idx} className="h-7 rounded bg-white/5 border border-white/5" />;

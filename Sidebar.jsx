@@ -8,9 +8,30 @@ function TreeItem({ href, label, active }) {
   return (
     <li className="relative pl-6">
       <span className="absolute left-0 top-0 h-full w-4">
-        <span className="absolute left-0 top-0 h-6 w-[1px] bg-white/20 rounded"></span>
-        <span className="absolute left-0 top-6 h-[calc(100%-1.5rem)] w-[1px] bg-white/20 rounded"></span>
-        <span className="absolute left-0 top-6 h-[1px] w-4 bg-white/20 rounded"></span>
+        <span
+          className="absolute left-0 top-0 h-6 w-[0.5px] rounded"
+          style={{
+            background: "linear-gradient(180deg, #eb1378 0%, #f9403b 50%, #fe5429 100%)",
+            opacity: 0.18,
+            filter: "blur(0.5px)"
+          }}
+        ></span>
+        <span
+          className="absolute left-0 top-6 h-[calc(100%-1.5rem)] w-[0.5px] rounded"
+          style={{
+            background: "linear-gradient(180deg, #eb1378 0%, #ee127d 100%)",
+            opacity: 0.14,
+            filter: "blur(0.5px)"
+          }}
+        ></span>
+        <span
+          className="absolute left-0 top-6 h-[1px] w-4 rounded"
+          style={{
+            background: "linear-gradient(90deg, #eb1378 0%, #fe5429 100%)",
+            opacity: 0.12,
+            filter: "blur(0.5px)"
+          }}
+        ></span>
       </span>
       <Link href={href} className={["inline-block rounded-xl px-4 py-2 transition-colors", active ? "bg-white/15":"hover:bg-white/10"].join(" ")}>{label}</Link>
     </li>
@@ -36,7 +57,12 @@ export default function Sidebar(){
   return (
     <aside className="relative">
       <div className="absolute -right-4 top-40 z-10 h-8 w-8 rounded-full glass flex items-center justify-center text-slate-200/70 select-none">‹</div>
-      <div className="glass rounded-[32px] p-4 lg:p-6 min-h-[100vh] flex flex-col">
+      <div
+        className="rounded-[32px] p-4 lg:p-6 min-h-[100vh] flex flex-col"
+        style={{
+          background: "linear-gradient(135deg, #eb1378 0%, #f9403b 35%, #fe5429 65%, #ee127d 100%)"
+        }}
+      >
         <div className="relative">
           <div className="absolute -top-3 left-0 right-0 flex items-center justify-center gap-2">
             <Dot className="bg-red-400/70"/><Dot className="bg-yellow-300/70"/><Dot className="bg-green-400/70"/>
